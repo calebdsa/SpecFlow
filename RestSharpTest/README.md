@@ -2,7 +2,7 @@ Basic Bank System API Automation Framework
 Overview
 This repository contains a C# API automation framework using SpecFlow, RestSharp, and NUnit for testing the Basic Bank System API. The framework focuses on scenarios such as creating an account, deleting an account, depositing to an account, and withdrawing from an account.
 
-Table of Contents
+Table of Contents:
 Prerequisites
 Project Structure
 Usage
@@ -11,21 +11,21 @@ Endpoints
 Test Coverage
 Tech Stacks
 
-Prerequisites
+Prerequisites:
 Before running the tests, make sure you have the following installed:
 Visual Studio or another C# development environment.
 SpecFlow for behavior-driven development (BDD).
 RestSharp for making API requests.
 NUnit for assertions.
 
-Project Structure
+Project Structure:
 The project is organized as follows:
 Features: Contains the SpecFlow feature files defining test scenarios.
 Models: Holds the C# objects for request and response serialization.
 Steps: Contains the C# step definitions for the scenarios.
 Utils: Includes a Helper class for serializing requests, executing endpoints, and deserializing responses.
 
-Usage
+Usage:
 Clone the repository:
 git clone https://github.com/calebdsa/SpecFlow.git
 Open the solution in your preferred C# development environment (e.g., Visual Studio).
@@ -33,7 +33,7 @@ Open the solution in your preferred C# development environment (e.g., Visual Stu
 Run the tests to ensure the system functions as expected:
 dotnet test
 
-Scenarios
+Scenarios:
 Scenario: Create new Account with valid data
     Given Account Initial Balance is $1000
     And Account name is "Rajesh Mittal"
@@ -83,9 +83,9 @@ Scenario Outline: Withdraw from an Account
     And Verify no error is returned
     And Verify the success message "Account {account Number} deleted successfully"
 
-Endpoints
-Create Account:
+Endpoints:
 
+Create Account:
 Endpoint: POST https://www.localhost:8080/api/account/create
 Request Payload:
 {
@@ -105,7 +105,6 @@ Response:
 }
 
 Delete Account:
-
 Endpoint: DELETE https://www.localhost:8080/api/account/delete/{accountID}
 Response:
 {
@@ -115,7 +114,6 @@ Response:
 }
 
 Deposit to Account:
-
 Endpoint: PUT https://www.localhost:8080/api/account/deposit
 Request Payload:
 {
@@ -133,7 +131,6 @@ Response:
 }
 
 Withdraw from Account:
-
 Endpoint: PUT https://www.localhost:8080/api/account/withdraw
 Request Payload:
 {
@@ -150,7 +147,7 @@ Response:
   "Errors": []
 }
 
-Test Coverage
+Test Coverage:
 The framework covers the following scenarios:
 
 Creating a new account with valid data.
@@ -158,7 +155,7 @@ Deleting an account.
 Depositing funds into an account with various scenarios.
 Withdrawing funds from an account with various scenarios.
 
-Tech Stacks
+Tech Stacks:
 SpecFlow: Behavior-driven development framework.
 RestSharp: HTTP library for making API requests.
 NUnit: Unit testing framework for assertions.
