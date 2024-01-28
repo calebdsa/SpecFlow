@@ -27,7 +27,7 @@ Utils: Includes a Helper class for serializing requests, executing endpoints, an
 
 Usage
 Clone the repository:
-git clone https://github.com/yourusername/basic-bank-api-automation.git
+git clone https://github.com/calebdsa/SpecFlow.git
 Open the solution in your preferred C# development environment (e.g., Visual Studio).
 
 Run the tests to ensure the system functions as expected:
